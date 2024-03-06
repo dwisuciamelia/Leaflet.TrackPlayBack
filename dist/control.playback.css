@@ -1,9 +1,18 @@
-.leaflet-control-playback{position:relative;background-color:#7cbdf5;padding:10px;}
-.leaflet-control-playback .optionsContainer{position:relative;}
+.leaflet-control-playback{position:relative;background-color:#7cbdf5;padding:10px;border-radius: 5px;}
+.leaflet-control-playback .optionsContainer{position:relative; display: flex; justify-content: space-between; }
 .leaflet-control-playback .optionsContainer > div {
-    display: inline-block;
+
+    display: inline-flex;
+    gap: 5px;
+    
 }
-.leaflet-control-playback .buttonContainer {}
+.leaflet-control-playback .buttonContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
 .leaflet-control-playback .buttonContainer  a {
     display: inline-block;
     width: 32px;
@@ -11,22 +20,58 @@
     text-decoration: none;
 }
 .leaflet-control-playback .buttonContainer .btn-stop {
-    background: url(./images/icon-play.png) no-repeat center;
+    background: url(./images/play.svg) no-repeat center;
+    border-radius: 50%;
 }
 .leaflet-control-playback .buttonContainer .btn-start {
-    background: url(./images/icon-stop.png) no-repeat center;
+    background: url(./images/pause.svg) no-repeat center;
+    border-radius: 50%;
 }
 .leaflet-control-playback .buttonContainer .btn-restart {
-    background: url(./images/icon-restart.png) no-repeat center;
+    background: url(./images/replay.svg) no-repeat center;
+    border-radius: 50%;
 }
 .leaflet-control-playback .buttonContainer .btn-slow {
-    background: url(./images/icon-slow.png) no-repeat center;
+    background: url(./images/slow.svg) no-repeat center;
+    border-radius: 50%;
 }
 .leaflet-control-playback .buttonContainer .btn-quick {
-    background:  url(./images/icon-quick.png) no-repeat center;
+    background:  url(./images/fast.svg) no-repeat center;
+    border-radius: 50%;
 }
 .leaflet-control-playback .buttonContainer .btn-close {
-    background: url(./images/icon-close.png)   no-repeat center;
+    background:  url(./images/close.svg) no-repeat center;
+    border-radius: 50%;
+}
+.leaflet-control-playback .buttonContainer .btn-open {
+    background:  url(./images/open.svg) no-repeat center;
+    border-radius: 50%;
 }
 .leaflet-control-playback .infoContainer {}
-.leaflet-control-playback .sliderContainer {}
+.leaflet-control-playback .info-container {
+    display: flex;
+}
+.leaflet-control-playback .info-title {
+    width: 6vw;
+}
+.leaflet-control-playback .info-space {
+    width: 1vw;
+}
+.leaflet-control-playback .sliderContainer {
+    margin-top: 3px;
+}
+.leaflet-control-playback .time-slider {
+    width: 200px;
+}
+
+.leaflet-control-playback .trackplayback-input {
+    color: #1C64F2;
+    background: #F3F4F6;
+    border-color: #D1D5DB;
+    border-radius: 30%;
+    width: 16px;
+    height: 16px;
+}
+.leaflet-control-playback .trackplayback-input:focus {
+    border-color: #3F83F8;
+}
