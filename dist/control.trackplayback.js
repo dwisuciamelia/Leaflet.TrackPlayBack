@@ -235,8 +235,8 @@
               this._showTrackLine
             )),
             (this._infoSpeedRatio = this._createInfo(
-              "Speed ",
-              `X${this.trackPlayBack.getSpeed()}`,
+              `Speed : X${this.trackPlayBack.getSpeed()}`,
+              "",
               "info-speed-ratio",
               this._optionsContainer
             )),

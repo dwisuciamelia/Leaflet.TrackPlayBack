@@ -62,6 +62,9 @@
 .leaflet-control-playback .info-cur-time {
     color: white;
 }
+.leaflet-control-playback .info-speed-ratio {
+    color: white;
+}
 .leaflet-control-playback .trackplayback-label {
     color: white;
 }
