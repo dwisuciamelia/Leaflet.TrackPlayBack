@@ -205,12 +205,12 @@
               "info-cur-time",
               this._infoContainer
             )),
-            (this._infoSpeedRatio = this._createInfo(
-              "Speed ",
-              `X${this.trackPlayBack.getSpeed()}`,
-              "info-speed-ratio",
-              this._infoContainer
-            )),
+            // (this._infoSpeedRatio = this._createInfo(
+            //   "Speed ",
+            //   `X${this.trackPlayBack.getSpeed()}`,
+            //   "info-speed-ratio",
+            //   this._infoContainer
+            // )),
             (this._slider = this._createSlider(
               "time-slider",
               this._sliderContainer,
@@ -235,8 +235,8 @@
               this._showTrackLine
             )),
             (this._infoSpeedRatio = this._createInfo(
-              `Speed : X${this.trackPlayBack.getSpeed()}`,
-              "",
+              "Speed :",
+              `X${this.trackPlayBack.getSpeed()}`,
               "info-speed-ratio",
               this._optionsContainer
             )),
