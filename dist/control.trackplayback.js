@@ -238,7 +238,7 @@
               "Speed ",
               `X${this.trackPlayBack.getSpeed()}`,
               "info-speed-ratio",
-              this._infoContainer
+              this._optionsContainer
             )),
             this._container
           );
