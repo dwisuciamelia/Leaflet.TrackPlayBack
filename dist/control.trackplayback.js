@@ -74,7 +74,7 @@
         a = i.n(n);
       const o = a.a.Control.extend({
         options: {
-          position: "topright",
+          position: "bottomright",
           showOptions: !0,
           showInfo: !0,
           showSlider: !0,
@@ -121,34 +121,42 @@
               "leaflet-control-playback"
             )),
             a.a.DomEvent.disableClickPropagation(this._container),
-            (this._optionsContainer = this._createContainer(
-              "optionsContainer",
-              this._container
-            )),
+            // (this._optionsContainer = this._createContainer(
+            //   "optionsContainer",
+            //   this._container
+            // )),
             (this._buttonContainer = this._createContainer(
               "buttonContainer",
               this._container
             )),
-            (this._infoContainer = this._createContainer(
-              "infoContainer",
-              this._container
-            )),
+            // (this._infoContainer = this._createContainer(
+            //   "infoContainer",
+            //   this._container
+            // )),
             (this._sliderContainer = this._createContainer(
               "sliderContainer",
               this._container
             )),
-            (this._pointCbx = this._createCheckbox(
-              "Track Point",
-              "show-trackpoint",
-              this._optionsContainer,
-              this._showTrackPoint
+            (this._optionsContainer = this._createContainer(
+              "optionsContainer",
+              this._container
             )),
-            (this._lineCbx = this._createCheckbox(
-              "Track Line",
-              "show-trackLine",
-              this._optionsContainer,
-              this._showTrackLine
+            (this._closeContainer = this._createContainer(
+              "closeContainer",
+              this._container
             )),
+            // (this._pointCbx = this._createCheckbox(
+            //   "Track Point",
+            //   "show-trackpoint",
+            //   this._optionsContainer,
+            //   this._showTrackPoint
+            // )),
+            // (this._lineCbx = this._createCheckbox(
+            //   "Track Line",
+            //   "show-trackLine",
+            //   this._optionsContainer,
+            //   this._showTrackLine
+            // )),
             (this._playBtn = this._createButton(
               "play",
               "btn-stop",
@@ -208,6 +216,30 @@
               this._sliderContainer,
               this._scrollchange
             )),
+            (this._infoCurTime = this._createInfo(
+              this.getTimeStrFromUnix(this.trackPlayBack.getStartTime()),
+              this.getTimeStrFromUnix(this.trackPlayBack.getCurTime()),
+              "info-cur-time",
+              this._sliderContainer
+            )),
+            (this._pointCbx = this._createCheckbox(
+              "Track Point",
+              "show-trackpoint",
+              this._optionsContainer,
+              this._showTrackPoint
+            )),
+            (this._lineCbx = this._createCheckbox(
+              "Track Line",
+              "show-trackLine",
+              this._optionsContainer,
+              this._showTrackLine
+            )),
+            (this._infoSpeedRatio = this._createInfo(
+              "Speed ",
+              `X${this.trackPlayBack.getSpeed()}`,
+              "info-speed-ratio",
+              this._infoContainer
+            )),
             this._container
           );
         },
@@ -242,7 +274,6 @@
         _createInfo: function (t, e, i, n) {
           let o = a.a.DomUtil.create("div", "info-container", n);
           a.a.DomUtil.create("span", "info-title", o).innerHTML = t;
-          a.a.DomUtil.create("span", "info-space", o).innerHTML = ":";
           let r = a.a.DomUtil.create("span", i, o);
           return (r.innerHTML = e), r;
         },
