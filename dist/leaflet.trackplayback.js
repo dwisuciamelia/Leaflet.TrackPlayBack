@@ -366,7 +366,6 @@
           },
           targetOptions: {
             useImg: !1,
-            imgUrl: require("../examples/ship.png"),
             width: 8,
             height: 18,
             color: "#00f",
